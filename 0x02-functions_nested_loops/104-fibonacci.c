@@ -1,27 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - print the sum of product of 3 or 5.
+ * main - find 1st 98 Fibonacci numbers
  *
- * Return: - void
+ * Return: zero
+ *
  */
 int main(void)
 {
-	int printcounter;
-	int one = 1, two = 1, sum = 1;
+        unsigned long int fib1 = 1, fib2 = 2, new;
+        int i;
 
-	printcounter = 1;
-	while (printcounter <= 98)
-	{
-		printf("%d", sum);
-		sum = one + two;
-		one = two;
-		two = sum;
-		if (printcounter == 98)
-			printf("\n");
-		else
-			printf(", ");
-		printcounter++;
-	}
-	return (0);
+        printf("1, 2, ");
+
+        for (i = 3; i <= 98; i++)
+        {
+                new = fib1 + fib2;
+
+                printf("%lu", new);
+
+                if (i < 98)
+                {
+                        printf(", ");
+                }
+                fib1 = fib2;
+                fib2 = new;
+        }
+        printf("\n");
+
+        return (0);
 }
