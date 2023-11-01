@@ -1,4 +1,10 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 /**
   * create_file - A function creates a file with rw  permissions
   * @filename: name of the file, if NULL, return -1
